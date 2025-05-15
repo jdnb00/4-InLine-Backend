@@ -15,9 +15,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JDNB\\source\\repos\\jdnb00\\4-InLine-Backend\\4-InLineBackend\\4-InLineBackend.csproj",
-      "projectName": "4-InLineBackend",
-      "projectPath": "C:\\Users\\JDNB\\source\\repos\\jdnb00\\4-InLine-Backend\\4-InLineBackend\\4-InLineBackend.csproj",
+      "projectUniqueName": "C:\\Users\\JDNB\\source\\repos\\jdnb00\\4-InLine-Backend\\4-InLineBackend\\4-InLineBackend.Host.csproj",
+      "projectName": "4-InLineBackend.Host",
+      "projectPath": "C:\\Users\\JDNB\\source\\repos\\jdnb00\\4-InLine-Backend\\4-InLineBackend\\4-InLineBackend.Host.csproj",
       "packagesPath": "C:\\Users\\JDNB\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\JDNB\\source\\repos\\jdnb00\\4-InLine-Backend\\4-InLineBackend\\obj\\",
       "projectStyle": "PackageReference",

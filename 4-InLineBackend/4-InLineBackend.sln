@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-InLineBackend", "4-InLineBackend.csproj", "{2671EA2D-6C72-4EA2-8D4D-B9DFFF24B22C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-InLineBackend.Host", "4-InLineBackend.Host.csproj", "{2671EA2D-6C72-4EA2-8D4D-B9DFFF24B22C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8ACBC850-77FF-4731-B103-2429F1D7E98A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +20,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2671EA2D-6C72-4EA2-8D4D-B9DFFF24B22C} = {8ACBC850-77FF-4731-B103-2429F1D7E98A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {57A84CBB-CFE5-45D9-92CB-3F3A2A97E736}
