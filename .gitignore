@@ -3,6 +3,10 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
  
+# Build Folders (you can keep bin if you'd like to check-in build results)
+bin/
+obj/
+
 # User-specific files
 *.rsuser
 *.suo
