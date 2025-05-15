@@ -1,25 +1,32 @@
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorPages();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+namespace _4_InLine_Backend.Host
 {
-    app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    public static class Program
+    {
+        public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
+
+        private static IHostBuilder CreateHostBuilder(string[] args)
+        {
+            return Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder(args)
+                  .ConfigureAppConfiguration(config =>
+                  {
+                      IConfiguration configuration = config.Build();
+
+                      //var appConfigurationConnection = configuration["AppConfigurationConnection"];
+                      //var roleName = configuration["CloudRoleName"];
+                      //if (!string.IsNullOrEmpty(appConfigurationConnection) && !string.IsNullOrEmpty(roleName))
+                      //{
+                      //    config.AddAzureAppConfigurationCustom(appConfigurationConnection, roleName)
+                      //    .AddUserSecrets(Assembly.GetExecutingAssembly());
+                      //}
+                  })
+                  //.ConfigureLogging()
+                  .ConfigureWebHostDefaults(webBuilder =>
+                  {
+                      webBuilder.UseStartup<Startup>();
+                  });
+        }
+    }
 }
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapRazorPages();
-
-app.Run();
