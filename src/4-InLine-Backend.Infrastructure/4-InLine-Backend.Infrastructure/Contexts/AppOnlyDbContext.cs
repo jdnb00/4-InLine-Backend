@@ -1,5 +1,6 @@
 ﻿using _4_InLine_Backend.Domain.Aggregate;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 
 namespace _4_InLine_Backend.Infrastructure.Contexts
 {
@@ -27,6 +28,16 @@ namespace _4_InLine_Backend.Infrastructure.Contexts
                     jugadas.OwnsOne(j => j.Jugador); // Value object dentro de jugada
                 });
             });
+        }
+    }
+    public class AppOnlyDbContextFactory : IDesignTimeDbContextFactory<AppOnlyDbContext>
+    {
+        public AppOnlyDbContext CreateDbContext(string[] args)
+        {
+            var optionsBuilder = new DbContextOptionsBuilder<AppOnlyDbContext>();
+            optionsBuilder.UseSqlite("Data Source=app.db"); // Usa el mismo string que en Program.cs
+
+            return new AppOnlyDbContext(optionsBuilder.Options);
         }
     }
 }

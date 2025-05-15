@@ -1,6 +1,5 @@
 ﻿using _4_InLine_Backend.Infrastructure.Contexts;
 using Microsoft.EntityFrameworkCore;
-using System.Data;
 using System.Diagnostics.CodeAnalysis;
 
 namespace _4_InLine_Backend.Host.Extensions
