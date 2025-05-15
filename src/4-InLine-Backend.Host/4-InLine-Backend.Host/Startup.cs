@@ -21,8 +21,9 @@ namespace _4_InLine_Backend.Host
               //.AddHandlersServices()
               //.AddRepositories()
               .AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()))
+              .AddControllers()
             ;
-            services.AddControllers();
+            //services.AddControllers();
             services.AddEndpointsApiExplorer();
             
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -43,7 +44,7 @@ namespace _4_InLine_Backend.Host
             app.UseRouting();
             app.UseAuthorization();
             app.UseAuthentication();
-            //app.MapControllers();
+
             //app.UseMiddleware<ErrorHandlingMiddleware>();
             //app.UseEnvConfigurations(env);
             app.UseCorsConfigurations();

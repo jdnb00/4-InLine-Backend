@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Serilog;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace _4_InLine_Backend.API.Controllers
 {
@@ -18,12 +19,13 @@ namespace _4_InLine_Backend.API.Controllers
 
         [HttpGet("hello")]
         public IActionResult Hello() => Ok("¡Funciona!");
-        //[HttpGet]
-        //[SwaggerOperation(Summary = "Primer Endpoint de Prueba")]
-        //[Route("InitialEndpoint")]
-        //public async Task<IActionResult> PrimerEndpoint(
-        //  //[FromRoute] QueryModels.GetListaDocumentacionImprimibleTiendaModelInput query,
-        //  //[FromServices] IQueryHandlers handlers
-        //  ) => await Task.FromResult(Ok("Respuesta de prueba"));
+
+        [HttpGet]
+        [SwaggerOperation(Summary = "Primer Endpoint de Prueba")]
+        [Route("InitialEndpoint")]
+        public async Task<IActionResult> PrimerEndpoint(
+          //[FromRoute] QueryModels.GetListaDocumentacionImprimibleTiendaModelInput query,
+          //[FromServices] IQueryHandlers handlers
+          ) => await Task.FromResult(Ok("Respuesta de prueba"));
     }
 }
