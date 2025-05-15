@@ -2,11 +2,6 @@
 using _4_InLine_Backend.Domain.Interfaces;
 using _4_InLine_Backend.Domain.ValueObjects;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _4_InLine_Backend.Application.Commnads.PostNuevoJuego
 {
@@ -21,27 +16,34 @@ namespace _4_InLine_Backend.Application.Commnads.PostNuevoJuego
 
         public async Task<PostNuevoJuegoResultDto> Handle(PostNuevoJuegoCommand request, CancellationToken cancellationToken)
         {
-            //borrar toda la bd del juego actual y crear jueg nuevo
-            var juegoNuevo = new Juego()
+            try
             {
-                IdJuego  = Guid.NewGuid().ToString(),
-                ColumnasMax =request.Columna,
-                FilasMax = request.Fila,
-                Finalizado = false,
-                Ganador = null,
-                Jugadas = new List<Jugada>()
-            };
+                //borrar toda la bd del juego actual y crear jueg nuevo
+                var juegoNuevo = new Juego()
+                {
+                    IdJuego = Guid.NewGuid().ToString(),
+                    ColumnasMax = request.Columna,
+                    FilasMax = request.Fila,
+                    Finalizado = false,
+                    Ganador = null,
+                    Jugadas = new List<Jugada>()
+                };
 
-            var data = await _JuegoRepository.PostNuevoJuego(juegoNuevo);
-            //mapper
-            var res = new PostNuevoJuegoResultDto()
+                var data = await _JuegoRepository.PostNuevoJuego(juegoNuevo);
+                //mapper
+                var res = new PostNuevoJuegoResultDto()
+                {
+
+                };
+
+                await _JuegoRepository.SaveAsync();
+                return res;
+
+            }
+            catch (Exception ex)
             {
-
-            };
-            
-
-            await _JuegoRepository.SaveAsync();
-            return res;
+                throw new ArgumentException("Error en Nuevo");
+            }
         }
     }
 }
