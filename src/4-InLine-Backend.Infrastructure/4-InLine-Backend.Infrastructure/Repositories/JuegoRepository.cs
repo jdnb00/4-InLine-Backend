@@ -17,6 +17,10 @@ namespace _4_InLine_Backend.Infrastructure.Repositories
             return juego;
         }
 
-
+        public async Task<Juego> PostNuevoJuego(Juego juegoNuevo)
+        {
+            await Context.AddAsync(juegoNuevo);
+            return juegoNuevo;
+        }
     }
 }

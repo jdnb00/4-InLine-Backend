@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Commnads\PostNuevaJugada\" />
-    <Folder Include="Commnads\PostNuevoJuego\" />
   </ItemGroup>
 
   <ItemGroup>
