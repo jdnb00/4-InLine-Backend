@@ -15,7 +15,7 @@ namespace _4_InLine_Backend.Host.Extensions
              new OpenApiInfo
                  {
                  //Title = Assembly.GetExecutingAssembly().GetName().Name,
-                     Title = "4InLIne Api Rest",
+                     Title = "4InLine Api Rest",
                      Version = "v1"
                  });
                 //Documentation
@@ -30,12 +30,12 @@ namespace _4_InLine_Backend.Host.Extensions
 
             @this.UseSwagger(c =>
             {
-                c.RouteTemplate = "4Inline/swagger/{documentName}/swagger.json";
+                c.RouteTemplate = "4InLine/api/swagger/{documentName}/swagger.json";
             });
             @this.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint(url: "/4Inline/swagger/v1/swagger.json", name: Assembly.GetExecutingAssembly().GetName().Name);
-                c.RoutePrefix = "4Inline/swagger";
+                c.SwaggerEndpoint(url: "/4InLine/api/swagger/v1/swagger.json", name: Assembly.GetExecutingAssembly().GetName().Name);
+                c.RoutePrefix = "4InLine/api/swagger";
             });
 
             return @this;

@@ -52,10 +52,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "MediatR": {
-              "target": "Package",
-              "version": "[12.5.0, )"
-            },
             "Microsoft.AspNetCore.Mvc.Core": {
               "target": "Package",
               "version": "[2.3.0, )"
