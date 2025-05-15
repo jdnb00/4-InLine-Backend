@@ -17,17 +17,18 @@ namespace _4_InLine_Backend.Host
         public void ConfigureServices(IServiceCollection services)
         {
             services
-              //.AddDbContexts(Configuration)
+              .AddDbContexts(Configuration)
               //.AddHandlersServices()
               //.AddRepositories()
               .AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()))
               .AddControllers()
             ;
             //services.AddControllers();
+            //services.AddADConfigurations();
+            
             services.AddEndpointsApiExplorer();
             
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            //services.AddADConfigurations();
             services.AddCorsConfig();
             services.AddSwaggerConfig();
             
@@ -44,11 +45,11 @@ namespace _4_InLine_Backend.Host
             app.UseRouting();
             app.UseAuthorization();
             app.UseAuthentication();
+            app.UseCorsConfigurations();
+            app.UseSwaggerConfigurations();
 
             //app.UseMiddleware<ErrorHandlingMiddleware>();
             //app.UseEnvConfigurations(env);
-            app.UseCorsConfigurations();
-            app.UseSwaggerConfigurations();
             //app.UseHealthCheckConfigurations();
 
         }
