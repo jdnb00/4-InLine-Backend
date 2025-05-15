@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("4-InLine-Backend.Host")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb3b83eae611d4b88a608af628bd76825b14e419")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd5a31400cc34efa30e2e8fc400637047c740c6e")]
 [assembly: System.Reflection.AssemblyProductAttribute("4-InLine-Backend.Host")]
 [assembly: System.Reflection.AssemblyTitleAttribute("4-InLine-Backend.Host")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
