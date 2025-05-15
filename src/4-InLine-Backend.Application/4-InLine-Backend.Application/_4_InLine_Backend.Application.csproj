@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commnads\" />
+    <Folder Include="Commnads\PostNuevaJugada\" />
+    <Folder Include="Commnads\PostNuevoJuego\" />
   </ItemGroup>
 
   <ItemGroup>

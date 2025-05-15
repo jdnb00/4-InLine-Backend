@@ -19,7 +19,7 @@ namespace _4_InLine_Backend.Host
             services
               .AddDbContexts(Configuration)
               //.AddHandlersServices()
-              //.AddRepositories()
+              .AddRepositories()
               .AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()))
               .AddControllers()
             ;
