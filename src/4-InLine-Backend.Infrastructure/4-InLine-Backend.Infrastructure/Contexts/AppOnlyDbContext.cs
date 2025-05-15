@@ -35,7 +35,7 @@ namespace _4_InLine_Backend.Infrastructure.Contexts
         public AppOnlyDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<AppOnlyDbContext>();
-            optionsBuilder.UseSqlite("Data Source=app.db"); // Usa el mismo string que en Program.cs
+            optionsBuilder.UseSqlite("Data Source=app.db"); // Usa el mismo string que en DBCOntextExtensions.cs
 
             return new AppOnlyDbContext(optionsBuilder.Options);
         }
