@@ -17,10 +17,16 @@ namespace _4_InLine_Backend.Infrastructure.Repositories
             return juego;
         }
 
-        public async Task<Juego> PostNuevoJuego(Juego juegoNuevo)
+        public async Task<Juego> NuevoJuego(Juego juegoNuevo)
         {
-            await Context.AddAsync(juegoNuevo);
+            await Context.Juegos.AddAsync(juegoNuevo);
             return juegoNuevo;
         }
+
+        public void BorrarJuego()
+        {
+            context.Juegos.RemoveRange(context.Juegos);
+        }
+
     }
 }

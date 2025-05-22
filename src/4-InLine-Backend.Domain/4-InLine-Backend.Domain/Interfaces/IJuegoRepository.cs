@@ -6,6 +6,7 @@ namespace _4_InLine_Backend.Domain.Interfaces
     {
         Task SaveAsync();
         Task<Juego?> GetEstadoJuego(string id);
-        Task<Juego> PostNuevoJuego(Juego juegoNuevo);
+        Task<Juego> NuevoJuego(Juego juegoNuevo);
+        void BorrarJuego();
     }
 }

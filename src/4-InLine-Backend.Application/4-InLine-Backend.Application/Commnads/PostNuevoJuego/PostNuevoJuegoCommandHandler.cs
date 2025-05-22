@@ -1,6 +1,6 @@
-﻿using _4_InLine_Backend.Domain.Aggregate;
+﻿using _4_InLine_Backend.Application.Mappers;
+using _4_InLine_Backend.Domain.Aggregate;
 using _4_InLine_Backend.Domain.Interfaces;
-using _4_InLine_Backend.Domain.ValueObjects;
 using MediatR;
 
 namespace _4_InLine_Backend.Application.Commnads.PostNuevoJuego
@@ -18,31 +18,19 @@ namespace _4_InLine_Backend.Application.Commnads.PostNuevoJuego
         {
             try
             {
-                //borrar toda la bd del juego actual y crear jueg nuevo
-                var juegoNuevo = new Juego()
-                {
-                    IdJuego = Guid.NewGuid().ToString(),
-                    ColumnasMax = request.Columna,
-                    FilasMax = request.Fila,
-                    Finalizado = false,
-                    Ganador = null,
-                    Jugadas = new List<Jugada>()
-                };
-
-                var data = await _JuegoRepository.PostNuevoJuego(juegoNuevo);
-                //mapper
-                var res = new PostNuevoJuegoResultDto()
-                {
-
-                };
-
+                //Borrar toda la bd del juego actual y crear jueg nuevo
+                _JuegoRepository.BorrarJuego();
+                //Crear Nuevo Juego
+                var data = await _JuegoRepository.NuevoJuego(Juego.Crear(request.Columna, request.Fila));
+                //Mapper
+                var res = PostNuevoJuegoResultDtoMapper.Map(data);
+                //Guardar Contexto
                 await _JuegoRepository.SaveAsync();
                 return res;
-
             }
             catch (Exception ex)
             {
-                throw new ArgumentException("Error en Nuevo");
+                throw new ArgumentException("Error en Nuevo" + ex.ToString());
             }
         }
     }
