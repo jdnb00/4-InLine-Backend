@@ -22,7 +22,7 @@ namespace _4_InLine_Backend.API.Controllers
         }
 
         [HttpGet]
-        [SwaggerOperation(Summary = "Primer Endpoint de Prueba")]
+        [SwaggerOperation(Summary = "Endpoint para obtener Estado de un Juego")]
         [Route("EstadoJuego/{idJuego}")]
         public async Task<IActionResult> GetEstadoJuego(string idJuego)
         {
@@ -32,7 +32,7 @@ namespace _4_InLine_Backend.API.Controllers
         }
 
         [HttpPost]
-        [SwaggerOperation(Summary = "Primer Endpoint de Prueba")]
+        [SwaggerOperation(Summary = "Endpoint para Crear un Nuevo Juego")]
         [Route("NuevoJuego/{columna}/{fila}")]
         public async Task<IActionResult> PostNuevoJuego(int columna, int fila)
         {
@@ -42,7 +42,7 @@ namespace _4_InLine_Backend.API.Controllers
         }
 
         [HttpPost]
-        [SwaggerOperation(Summary = "Primer Endpoint de Prueba")]
+        [SwaggerOperation(Summary = "Endpoint para agregar una nueva jugada")]
         [Route("NuevaJugada")]
         public async Task<IActionResult> PostNuevaJugada()
             => await Task.FromResult(Ok("¡Funciona!... Respuesta de prueba3"));
