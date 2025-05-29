@@ -12,5 +12,9 @@ namespace _4_InLine_Backend.Application.Services
             return await _JuegoRepository.GetEstadoJuego(id);
         }
 
+        public async Task SaveContext()
+        {
+           await _JuegoRepository.SaveAsync();
+        }
     }
 }

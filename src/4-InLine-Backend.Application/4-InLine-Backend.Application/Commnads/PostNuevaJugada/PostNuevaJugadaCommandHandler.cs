@@ -34,17 +34,12 @@ namespace _4_InLine_Backend.Application.Commnads.PostNuevaJugada
                     Columna = command.Columna,
                     Fila = nFila,
                 };
-                //guardarJugada
                 juego.AddJugada(nJugada);
 
-                //juego.DefinirJugadas(nJugada);
-                _juegoService.SaveContext();
+                // Guardar Contexto
+                await _juegoService.SaveContext();
 
-                PostNuevaJugadaResultDto res = MapResult(juego);
-                // Metodo(jugadas, nuevaJugada, jugador) que reciba todas las juagas y cree una jugada nueva
-                // con esta posicion (col, fila), hacer verificacion en todas las direcciones posibles 
-
-                return res;
+                return MapResult(juego);
             }
             catch (Exception ex)
             {

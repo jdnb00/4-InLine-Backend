@@ -17,15 +17,11 @@ namespace _4_InLine_Backend.Infrastructure.Contexts
             {
                 juego.HasKey(j => j.IdJuego);
 
-                // Value object embebido como Ganador
-                juego.OwnsOne(j => j.Ganador);
-
                 // Jugadas como colección de entidades
                 juego.OwnsMany(j => j.Jugadas, jugadas =>
                 {
                     jugadas.WithOwner();
                     jugadas.HasKey(j => j.Id);
-                    jugadas.OwnsOne(j => j.Jugador); // Value object dentro de jugada
                 });
             });
         }

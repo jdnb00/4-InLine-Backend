@@ -4,8 +4,7 @@ namespace _4_InLine_Backend.Domain.Interfaces
 {
     public interface IJuegoService
     {
-        void SaveContext();
+        Task SaveContext();
         Task<Juego?> GetEstadoJuego(string id);
-        Task<Juego> DefinirGanador(Juego juego);
     }
 }
