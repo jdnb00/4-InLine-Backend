@@ -19,7 +19,7 @@ namespace _4_InLine_Backend.Application.Commnads.PostNuevoJuego
             try
             {
                 //Borrar toda la bd del juego actual y crear jueg nuevo
-                _JuegoRepository.BorrarJuego();
+                _JuegoRepository.BorrarJuegos();
                 //Crear Nuevo Juego
                 var data = await _JuegoRepository.NuevoJuego(Juego.Crear(request.Columna, request.Fila));
                 //Mapper
