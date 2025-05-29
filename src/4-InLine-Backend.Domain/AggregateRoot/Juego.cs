@@ -36,16 +36,16 @@ namespace InLineBackend.Domain.Aggregate
         public void DefinirJugadas(Jugada njugada)
         {
             var h = CheckHorizontal(njugada.Fila, njugada.Columna, njugada.Jugador);
-            if (h.Count >= 4) { MarcarGanadoras(h); return; }
+            if (h.Count >= 3) { h.Add((njugada.Fila, njugada.Columna)); MarcarGanadoras(h); return; }
 
             var v = CheckVertical(njugada.Fila, njugada.Columna, njugada.Jugador);
-            if (v.Count >= 4) { MarcarGanadoras(v); return; }
+            if (v.Count >= 3) { v.Add((njugada.Fila, njugada.Columna)); MarcarGanadoras(v); return; }
 
             var dd = CheckDiaDerecha(njugada.Fila, njugada.Columna, njugada.Jugador);
-            if (dd.Count >= 4) { MarcarGanadoras(dd); return; }
+            if (dd.Count >= 3) { dd.Add((njugada.Fila, njugada.Columna)); MarcarGanadoras(dd); return; }
 
             var di = CheckDiaIzquierda(njugada.Fila, njugada.Columna, njugada.Jugador);
-            if (di.Count >= 4) { MarcarGanadoras(di); return; }
+            if (di.Count >= 3) { di.Add((njugada.Fila, njugada.Columna)); MarcarGanadoras(di); return; }
 
         }
 
