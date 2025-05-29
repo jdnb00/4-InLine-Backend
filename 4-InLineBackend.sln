@@ -7,17 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8ACBC850-77F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{542B0C50-57DD-4BB4-9B60-DF10AE695A75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-InLine-Backend.Host", "src\4-InLine-Backend.Host\4-InLine-Backend.Host\4-InLine-Backend.Host.csproj", "{780528AD-6E0C-48E4-9433-69601BCDB777}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_4_InLine_Backend.Host", "src\4-InLine-Backend.Host\4-InLine-Backend.Host\_4_InLine_Backend.Host.csproj", "{780528AD-6E0C-48E4-9433-69601BCDB777}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-InLine-Backend.API", "src\4-InLine-Backend.API\4-InLine-Backend.API\4-InLine-Backend.API.csproj", "{DEDCBC7B-A658-41E7-B001-D752FCF60C13}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_4_InLine_Backend.API", "src\4-InLine-Backend.API\4-InLine-Backend.API\_4_InLine_Backend.API.csproj", "{DEDCBC7B-A658-41E7-B001-D752FCF60C13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-InLine-Backend.Application", "src\4-InLine-Backend.Application\4-InLine-Backend.Application\4-InLine-Backend.Application.csproj", "{B2877668-6F0C-4B49-B409-185B341B5EB8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_4_InLine_Backend.Application", "src\4-InLine-Backend.Application\4-InLine-Backend.Application\_4_InLine_Backend.Application.csproj", "{B2877668-6F0C-4B49-B409-185B341B5EB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-InLine-Backend.Domain", "src\4-InLine-Backend.Domain\4-InLine-Backend.Domain\4-InLine-Backend.Domain.csproj", "{A87562FC-2C4E-4776-85A4-41AC3D9EC59B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_4_InLine_Backend.Domain", "src\4-InLine-Backend.Domain\4-InLine-Backend.Domain\_4_InLine_Backend.Domain.csproj", "{A87562FC-2C4E-4776-85A4-41AC3D9EC59B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-InLine-Backend.Infrastructure", "src\4-InLine-Backend.Infrastructure\4-InLine-Backend.Infrastructure\4-InLine-Backend.Infrastructure.csproj", "{C3D83FED-A54A-49CC-A2CA-2D77673A5D4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_4_InLine_Backend.Infrastructure", "src\4-InLine-Backend.Infrastructure\4-InLine-Backend.Infrastructure\_4_InLine_Backend.Infrastructure.csproj", "{C3D83FED-A54A-49CC-A2CA-2D77673A5D4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-InLine-Backend.Host.Test", "test\4-InLine-Backend.Host.Test\4-InLine-Backend.Host.Test\4-InLine-Backend.Host.Test.csproj", "{6E3F56FC-2E42-4503-9DDF-0656720861BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_4_InLine_Backend.Host.Test", "test\4-InLine-Backend.Host.Test\4-InLine-Backend.Host.Test\_4_InLine_Backend.Host.Test.csproj", "{6E3F56FC-2E42-4503-9DDF-0656720861BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

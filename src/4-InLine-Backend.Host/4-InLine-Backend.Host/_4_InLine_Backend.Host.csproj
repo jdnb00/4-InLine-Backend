@@ -15,12 +15,13 @@
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.16" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="8.1.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\4-InLine-Backend.API\4-InLine-Backend.API\4-InLine-Backend.API.csproj" />
+    <ProjectReference Include="..\..\4-InLine-Backend.API\4-InLine-Backend.API\_4_InLine_Backend.API.csproj" />
   </ItemGroup>
 
 </Project>
