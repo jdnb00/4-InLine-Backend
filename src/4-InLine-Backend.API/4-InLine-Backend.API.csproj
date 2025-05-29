@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\4-InLine-Backend.Application\4-InLine-Backend.Application\4-InLine-Backend.Application.csproj" />
+    <ProjectReference Include="..\4-InLine-Backend.Application\4-InLine-Backend.Application.csproj" />
   </ItemGroup>
 
 </Project>

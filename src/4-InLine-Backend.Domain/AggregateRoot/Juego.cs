@@ -15,7 +15,7 @@ namespace InLineBackend.Domain.Aggregate
             return Jugadas.FirstOrDefault(x => x.Marcada)?.Jugador;
         }
         public List<Jugada> Jugadas { get; set; }
-
+        protected Juego() { }
         private Juego(int col, int fil)
         {
             ColumnasMax = col;
