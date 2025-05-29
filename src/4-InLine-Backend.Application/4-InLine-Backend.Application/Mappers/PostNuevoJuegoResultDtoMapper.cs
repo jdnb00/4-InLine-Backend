@@ -1,7 +1,7 @@
-﻿using _4_InLine_Backend.Application.Commnads.PostNuevoJuego;
-using _4_InLine_Backend.Domain.Aggregate;
+﻿using InLineBackend.Application.Commnads.PostNuevoJuego;
+using InLineBackend.Domain.Aggregate;
 
-namespace _4_InLine_Backend.Application.Mappers
+namespace InLineBackend.Application.Mappers
 {
     public static class PostNuevoJuegoResultDtoMapper
     {

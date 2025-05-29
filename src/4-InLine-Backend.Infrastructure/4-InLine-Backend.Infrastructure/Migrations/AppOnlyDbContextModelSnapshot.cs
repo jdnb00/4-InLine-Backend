@@ -2,11 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using _4_InLine_Backend.Infrastructure.Contexts;
+using InLineBackend.Infrastructure.Contexts;
 
 #nullable disable
 
-namespace _4_InLine_Backend.Infrastructure.Migrations
+namespace InLineBackend.Infrastructure.Migrations
 {
     [DbContext(typeof(AppOnlyDbContext))]
     partial class AppOnlyDbContextModelSnapshot : ModelSnapshot
@@ -16,7 +16,7 @@ namespace _4_InLine_Backend.Infrastructure.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.16");
 
-            modelBuilder.Entity("_4_InLine_Backend.Domain.Aggregate.Juego", b =>
+            modelBuilder.Entity("InLineBackend.Domain.Aggregate.Juego", b =>
                 {
                     b.Property<string>("IdJuego")
                         .HasColumnType("TEXT");
@@ -35,9 +35,9 @@ namespace _4_InLine_Backend.Infrastructure.Migrations
                     b.ToTable("Juegos");
                 });
 
-            modelBuilder.Entity("_4_InLine_Backend.Domain.Aggregate.Juego", b =>
+            modelBuilder.Entity("InLineBackend.Domain.Aggregate.Juego", b =>
                 {
-                    b.OwnsOne("_4_InLine_Backend.Domain.ValueObjects.Jugador", "Ganador", b1 =>
+                    b.OwnsOne("InLineBackend.Domain.ValueObjects.Jugador", "Ganador", b1 =>
                         {
                             b1.Property<string>("JuegoIdJuego")
                                 .HasColumnType("TEXT");
@@ -58,7 +58,7 @@ namespace _4_InLine_Backend.Infrastructure.Migrations
                                 .HasForeignKey("JuegoIdJuego");
                         });
 
-                    b.OwnsMany("_4_InLine_Backend.Domain.ValueObjects.Jugada", "Jugadas", b1 =>
+                    b.OwnsMany("InLineBackend.Domain.ValueObjects.Jugada", "Jugadas", b1 =>
                         {
                             b1.Property<string>("Id")
                                 .HasColumnType("TEXT");
@@ -89,7 +89,7 @@ namespace _4_InLine_Backend.Infrastructure.Migrations
                             b1.WithOwner()
                                 .HasForeignKey("JuegoIdJuego");
 
-                            b1.OwnsOne("_4_InLine_Backend.Domain.ValueObjects.Jugador", "Jugador", b2 =>
+                            b1.OwnsOne("InLineBackend.Domain.ValueObjects.Jugador", "Jugador", b2 =>
                                 {
                                     b2.Property<string>("JugadaId")
                                         .HasColumnType("TEXT");

@@ -2,7 +2,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
-namespace _4_InLine_Backend.Host.Extensions
+namespace InLineBackend.Host.Extensions
 {
     [ExcludeFromCodeCoverage]
     public static class SwaggerExtensions

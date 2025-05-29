@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _4_InLine_Backend.Host.Test
+namespace InLineBackend.Host.Test
 {
     public class RepositoryTest
     {

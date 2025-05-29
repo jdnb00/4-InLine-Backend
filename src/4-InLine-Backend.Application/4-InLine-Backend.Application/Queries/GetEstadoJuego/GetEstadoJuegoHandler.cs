@@ -1,8 +1,8 @@
-﻿using _4_InLine_Backend.Application.Dto;
-using _4_InLine_Backend.Domain.Interfaces;
+﻿using InLineBackend.Application.Dto;
+using InLineBackend.Domain.Interfaces;
 using MediatR;
 
-namespace _4_InLine_Backend.Application.Queries.GetEstadoJuego
+namespace InLineBackend.Application.Queries.GetEstadoJuego
 {
     public class GetEstadoJuegoHandler : IRequestHandler<GetEstadoJuegoQuery, GetEstadoJuegoResultDto>
     {
@@ -25,21 +25,13 @@ namespace _4_InLine_Backend.Application.Queries.GetEstadoJuego
                     ColumnaMax = juego.ColumnasMax,
                     FilaMax = juego.FilasMax,
                     Finalizado = juego.Finalizado,
-                    Ganador = new JugadorDto()
-                    {
-                        Id = juego.Ganador.Id,
-                        Nombre = juego.Ganador.Nombre
-                    }
+                    Ganador = juego.Ganador
                 },
                 Matriz = juego.Jugadas.Select(x => new JugadaDto()
                 {
                     Id = x.Id,
                     IdJuego = x.IdJuego,
-                    Jugador = new JugadorDto() 
-                    {
-                        Id = x.Jugador.Id,
-                        Nombre = x.Jugador.Nombre
-                    },
+                    Jugador = x.Jugador,
                     Columna = x.Columna,
                     Fila = x.Fila,
                     Marcada = x.Marcada

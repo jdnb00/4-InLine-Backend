@@ -1,9 +1,9 @@
-﻿using _4_InLine_Backend.Domain.Aggregate;
-using _4_InLine_Backend.Domain.Interfaces;
-using _4_InLine_Backend.Domain.ValueObjects;
+﻿using InLineBackend.Domain.Aggregate;
+using InLineBackend.Domain.Interfaces;
+using InLineBackend.Domain.ValueObjects;
 using MediatR;
 
-namespace _4_InLine_Backend.Application.Commnads.PostNuevaJugada
+namespace InLineBackend.Application.Commnads.PostNuevaJugada
 {
     public class PostNuevaJugadaCommandHandler(IJuegoService juegoService) : IRequestHandler<PostNuevaJugadaCommand, PostNuevaJugadaResultDto>
     {

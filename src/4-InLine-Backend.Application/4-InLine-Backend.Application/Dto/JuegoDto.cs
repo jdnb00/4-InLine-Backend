@@ -1,5 +1,5 @@
 ﻿
-namespace _4_InLine_Backend.Application.Dto
+namespace InLineBackend.Application.Dto
 {
     public class JuegoDto
     {
@@ -7,7 +7,7 @@ namespace _4_InLine_Backend.Application.Dto
         public int ColumnaMax { get; set; }
         public int FilaMax { get; set; }
         public bool Finalizado { get; set; }
-        public JugadorDto? Ganador { get; set; }
+        public int? Ganador { get; set; }
 
     }
 }

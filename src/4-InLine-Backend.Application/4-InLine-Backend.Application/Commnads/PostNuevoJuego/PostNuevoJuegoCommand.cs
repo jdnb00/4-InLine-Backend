@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace _4_InLine_Backend.Application.Commnads.PostNuevoJuego
+namespace InLineBackend.Application.Commnads.PostNuevoJuego
 {
     public record PostNuevoJuegoCommand : IRequest<PostNuevoJuegoResultDto>
     {

@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace _4_InLine_Backend.Infrastructure.Migrations
+namespace InLineBackend.Infrastructure.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

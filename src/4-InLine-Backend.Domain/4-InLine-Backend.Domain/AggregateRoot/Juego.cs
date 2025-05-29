@@ -1,6 +1,6 @@
-﻿using _4_InLine_Backend.Domain.ValueObjects;
+﻿using InLineBackend.Domain.ValueObjects;
 
-namespace _4_InLine_Backend.Domain.Aggregate
+namespace InLineBackend.Domain.Aggregate
 {
     public class Juego
     {

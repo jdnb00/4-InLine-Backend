@@ -1,8 +1,8 @@
-﻿using _4_InLine_Backend.Infrastructure.Contexts;
+﻿using InLineBackend.Infrastructure.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.CodeAnalysis;
 
-namespace _4_InLine_Backend.Host.Extensions
+namespace InLineBackend.Host.Extensions
 {
     [ExcludeFromCodeCoverage]
     public static class DBContextExtensions

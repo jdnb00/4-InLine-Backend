@@ -1,4 +1,4 @@
-﻿namespace _4_InLine_Backend.Application.Commnads.PostNuevoJuego
+﻿namespace InLineBackend.Application.Commnads.PostNuevoJuego
 {
     public class PostNuevoJuegoResultDto
     {

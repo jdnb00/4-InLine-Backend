@@ -1,9 +1,9 @@
-﻿using _4_InLine_Backend.Application.Mappers;
-using _4_InLine_Backend.Domain.Aggregate;
-using _4_InLine_Backend.Domain.Interfaces;
+﻿using InLineBackend.Application.Mappers;
+using InLineBackend.Domain.Aggregate;
+using InLineBackend.Domain.Interfaces;
 using MediatR;
 
-namespace _4_InLine_Backend.Application.Commnads.PostNuevoJuego
+namespace InLineBackend.Application.Commnads.PostNuevoJuego
 {
     public class PostNuevoJuegoCommandHandler : IRequestHandler<PostNuevoJuegoCommand, PostNuevoJuegoResultDto>
     {

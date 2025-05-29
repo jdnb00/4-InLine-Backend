@@ -1,8 +1,8 @@
-﻿using _4_InLine_Backend.Domain.Aggregate;
+﻿using InLineBackend.Domain.Aggregate;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace _4_InLine_Backend.Infrastructure.Contexts
+namespace InLineBackend.Infrastructure.Contexts
 {
     public class AppOnlyDbContext : DbContext
     {

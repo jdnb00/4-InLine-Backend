@@ -1,4 +1,4 @@
-﻿namespace _4_InLine_Backend.Domain.ValueObjects
+﻿namespace InLineBackend.Domain.ValueObjects
 {
     public class Jugada
     {

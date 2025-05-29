@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace _4_InLine_Backend.Domain.ValueObjects
+namespace InLineBackend.Domain.ValueObjects
 {
     [Owned]
     public class Jugador

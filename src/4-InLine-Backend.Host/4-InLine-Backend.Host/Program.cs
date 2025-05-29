@@ -1,4 +1,4 @@
-namespace _4_InLine_Backend.Host
+namespace InLineBackend.Host
 {
     public static class Program
     {

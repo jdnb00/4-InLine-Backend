@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace _4_InLine_Backend.Host.Extensions
+namespace InLineBackend.Host.Extensions
 {
     [ExcludeFromCodeCoverage]
     public static class CorsExtensions

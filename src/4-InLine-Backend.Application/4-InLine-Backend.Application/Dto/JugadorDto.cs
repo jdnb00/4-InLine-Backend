@@ -1,4 +1,4 @@
-﻿namespace _4_InLine_Backend.Application.Dto
+﻿namespace InLineBackend.Application.Dto
 {
     public class JugadorDto
     {

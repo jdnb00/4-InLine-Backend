@@ -1,7 +1,7 @@
-﻿using _4_InLine_Backend.Domain.Aggregate;
-using _4_InLine_Backend.Domain.Interfaces;
+﻿using InLineBackend.Domain.Aggregate;
+using InLineBackend.Domain.Interfaces;
 
-namespace _4_InLine_Backend.Application.Services
+namespace InLineBackend.Application.Services
 {
     public class JuegoService(IJuegoRepository juegoRepository) : IJuegoService
     {

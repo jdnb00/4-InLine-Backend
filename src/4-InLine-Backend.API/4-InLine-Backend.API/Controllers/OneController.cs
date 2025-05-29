@@ -1,13 +1,13 @@
-﻿using _4_InLine_Backend.Application.Commnads.PostNuevaJugada;
-using _4_InLine_Backend.Application.Commnads.PostNuevoJuego;
-using _4_InLine_Backend.Application.Queries.GetEstadoJuego;
-using _4_InLine_Backend.Domain.Aggregate;
+﻿using InLineBackend.Application.Commnads.PostNuevaJugada;
+using InLineBackend.Application.Commnads.PostNuevoJuego;
+using InLineBackend.Application.Queries.GetEstadoJuego;
+using InLineBackend.Domain.Aggregate;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
 using Swashbuckle.AspNetCore.Annotations;
 
-namespace _4_InLine_Backend.API.Controllers
+namespace InLineBackend.API.Controllers
 {
     [ApiController]
     [Route("4InLine/api/[controller]")]
@@ -44,10 +44,10 @@ namespace _4_InLine_Backend.API.Controllers
 
         [HttpPost]
         [SwaggerOperation(Summary = "Endpoint para agregar una nueva jugada")]
-        [Route("NuevaJugada/{columna}")]
-        public async Task<IActionResult> PostNuevaJugada()
+        [Route("NuevaJugada/{idJuego}/{jugador}/{columna}")]
+        public async Task<IActionResult> PostNuevaJugada(string idJuego, int jugador, int columna)
         {
-            var command = new PostNuevaJugadaCommand(columna);
+            var command = new PostNuevaJugadaCommand(idJuego, jugador, columna);
             var res = await _mediator.Send(command);
             return Ok(res);
         }

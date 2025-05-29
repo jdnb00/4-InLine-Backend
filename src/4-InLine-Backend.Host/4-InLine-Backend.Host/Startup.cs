@@ -1,7 +1,7 @@
-﻿using _4_InLine_Backend.Host.Extensions;
+﻿using InLineBackend.Host.Extensions;
 using System.Reflection;
 
-namespace _4_InLine_Backend.Host
+namespace InLineBackend.Host
 {
     public class Startup
     {

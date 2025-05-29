@@ -1,6 +1,6 @@
-﻿using _4_InLine_Backend.Domain.Aggregate;
+﻿using InLineBackend.Domain.Aggregate;
 
-namespace _4_InLine_Backend.Domain.Interfaces
+namespace InLineBackend.Domain.Interfaces
 {
     public interface IJuegoService
     {

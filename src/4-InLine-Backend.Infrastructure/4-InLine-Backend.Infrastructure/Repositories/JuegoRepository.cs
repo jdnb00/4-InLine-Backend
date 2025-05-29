@@ -1,9 +1,9 @@
-﻿using _4_InLine_Backend.Domain.Aggregate;
-using _4_InLine_Backend.Domain.Interfaces;
-using _4_InLine_Backend.Infrastructure.Contexts;
+﻿using InLineBackend.Domain.Aggregate;
+using InLineBackend.Domain.Interfaces;
+using InLineBackend.Infrastructure.Contexts;
 using Microsoft.EntityFrameworkCore;
 
-namespace _4_InLine_Backend.Infrastructure.Repositories
+namespace InLineBackend.Infrastructure.Repositories
 {
     public class JuegoRepository(AppOnlyDbContext context) : IJuegoRepository
     {

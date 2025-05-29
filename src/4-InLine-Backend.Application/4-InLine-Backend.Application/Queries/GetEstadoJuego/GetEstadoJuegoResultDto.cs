@@ -1,6 +1,6 @@
-﻿using _4_InLine_Backend.Application.Dto;
+﻿using InLineBackend.Application.Dto;
 
-namespace _4_InLine_Backend.Application.Queries.GetEstadoJuego
+namespace InLineBackend.Application.Queries.GetEstadoJuego
 {
     public class GetEstadoJuegoResultDto
     {

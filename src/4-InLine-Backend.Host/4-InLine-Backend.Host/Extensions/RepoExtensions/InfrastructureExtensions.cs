@@ -1,8 +1,8 @@
-﻿using _4_InLine_Backend.Domain.Interfaces;
-using _4_InLine_Backend.Infrastructure.Repositories;
+﻿using InLineBackend.Domain.Interfaces;
+using InLineBackend.Infrastructure.Repositories;
 using System.Diagnostics.CodeAnalysis;
 
-namespace _4_InLine_Backend.Host.Extensions
+namespace InLineBackend.Host.Extensions
 {
     [ExcludeFromCodeCoverage]
     public static class InfrastructureExtensions
