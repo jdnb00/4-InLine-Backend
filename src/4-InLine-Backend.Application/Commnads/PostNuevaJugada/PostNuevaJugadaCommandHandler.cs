@@ -17,12 +17,14 @@ namespace InLineBackend.Application.Commnads.PostNuevaJugada
                 Juego? juego = await _juegoService.GetEstadoJuego(command.IdJuego) ??
                     throw new ArgumentException("Juego no Existe...");
                 // definir fila de esta juagada
-                int nFila = juego.Jugadas.Where(x => x.Columna == command.Columna).Max(x => x.Fila) + 1;
+                int nFila = juego.Jugadas.Where(x => x.Columna == command.Columna)
+                            .Select(x => x.Fila).DefaultIfEmpty(-1).Max() + 1;
 
                 //validaciones columnas contra command.columna y nueva fila
                 if (command.Columna > juego.ColumnasMax || command.Columna < 0) { throw new ArgumentException("Numero d Columna incorrecta"); }
                 //validaciones columnas contra command.columna y nueva fila
                 if (nFila > juego.FilasMax || nFila < 0) { return MapResult(juego); }
+                //Validar jugada Repetida
 
                 if (juego.Finalizado) { return MapResult(juego); }
 

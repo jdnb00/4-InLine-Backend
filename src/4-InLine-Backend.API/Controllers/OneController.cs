@@ -1,7 +1,6 @@
 ﻿using InLineBackend.Application.Commnads.PostNuevaJugada;
 using InLineBackend.Application.Commnads.PostNuevoJuego;
 using InLineBackend.Application.Queries.GetEstadoJuego;
-using InLineBackend.Domain.Aggregate;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
@@ -37,9 +36,17 @@ namespace InLineBackend.API.Controllers
         [Route("NuevoJuego/{columna}/{fila}")]
         public async Task<IActionResult> PostNuevoJuego(int columna, int fila)
         {
-            var command = new PostNuevoJuegoCommand(columna, fila);
-            var res = await _mediator.Send(command);
-            return Ok(res);
+            try
+            {
+                var command = new PostNuevoJuegoCommand(columna, fila);
+                var res = await _mediator.Send(command);
+                return Ok(res);
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPost]
