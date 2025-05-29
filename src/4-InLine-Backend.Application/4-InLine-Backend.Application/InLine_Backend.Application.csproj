@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\4-InLine-Backend.Domain\4-InLine-Backend.Domain\_4_InLine_Backend.Domain.csproj" />
-    <ProjectReference Include="..\..\4-InLine-Backend.Infrastructure\4-InLine-Backend.Infrastructure\_4_InLine_Backend.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\4-InLine-Backend.Domain\4-InLine-Backend.Domain\InLine_Backend.Domain.csproj" />
+    <ProjectReference Include="..\..\4-InLine-Backend.Infrastructure\4-InLine-Backend.Infrastructure\InLine_Backend.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
