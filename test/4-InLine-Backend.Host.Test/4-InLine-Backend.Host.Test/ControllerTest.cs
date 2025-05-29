@@ -1,4 +1,4 @@
-namespace _4_InLine_Backend.Host.Test
+namespace InLineBackend.Host.Test
 {
     [TestClass]
     public class ControllerTest
