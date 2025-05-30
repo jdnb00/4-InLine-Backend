@@ -1,5 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace InLineBackend.Host
 {
+    [ExcludeFromCodeCoverage]
     public static class Program
     {
         public static void Main(string[] args)

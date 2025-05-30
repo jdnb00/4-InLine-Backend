@@ -21,32 +21,24 @@ namespace InLineBackend.API.Controllers
             _log.Information("Init");
         }
 
-        [HttpGet]
-        [SwaggerOperation(Summary = "Endpoint para obtener Estado de un Juego")]
-        [Route("EstadoJuego/{idJuego}")]
-        public async Task<IActionResult> GetEstadoJuego(string idJuego)
-        {
-            var query = new GetEstadoJuegoQuery(idJuego);
-            var res = await _mediator.Send(query);
-            return Ok(res);
-        }
+        //[HttpGet]
+        //[SwaggerOperation(Summary = "Endpoint para obtener Estado de un Juego")]
+        //[Route("EstadoJuego/{idJuego}")]
+        //public async Task<IActionResult> GetEstadoJuego(string idJuego)
+        //{
+        //    var query = new GetEstadoJuegoQuery(idJuego);
+        //    var res = await _mediator.Send(query);
+        //    return Ok(res);
+        //}
 
         [HttpPost]
         [SwaggerOperation(Summary = "Endpoint para Crear un Nuevo Juego")]
         [Route("NuevoJuego/{columna}/{fila}")]
         public async Task<IActionResult> PostNuevoJuego(int columna, int fila)
         {
-            try
-            {
-                var command = new PostNuevoJuegoCommand(columna, fila);
-                var res = await _mediator.Send(command);
-                return Ok(res);
-
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var command = new PostNuevoJuegoCommand(columna, fila);
+            var res = await _mediator.Send(command);
+            return Ok(res);
         }
 
         [HttpPost]
