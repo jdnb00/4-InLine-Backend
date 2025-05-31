@@ -1,6 +1,5 @@
 ﻿using InLineBackend.Application.Commnads.PostNuevaJugada;
 using InLineBackend.Application.Commnads.PostNuevoJuego;
-using InLineBackend.Application.Queries.GetEstadoJuego;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
@@ -20,16 +19,6 @@ namespace InLineBackend.API.Controllers
             _mediator = mediator;
             _log.Information("Init");
         }
-
-        //[HttpGet]
-        //[SwaggerOperation(Summary = "Endpoint para obtener Estado de un Juego")]
-        //[Route("EstadoJuego/{idJuego}")]
-        //public async Task<IActionResult> GetEstadoJuego(string idJuego)
-        //{
-        //    var query = new GetEstadoJuegoQuery(idJuego);
-        //    var res = await _mediator.Send(query);
-        //    return Ok(res);
-        //}
 
         [HttpPost]
         [SwaggerOperation(Summary = "Endpoint para Crear un Nuevo Juego")]

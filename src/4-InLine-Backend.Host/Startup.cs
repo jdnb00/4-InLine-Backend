@@ -1,6 +1,5 @@
 ﻿using InLineBackend.Application.Commnads.PostNuevaJugada;
 using InLineBackend.Application.Commnads.PostNuevoJuego;
-using InLineBackend.Application.Queries.GetEstadoJuego;
 using InLineBackend.Host.Extensions;
 using InLineBackend.Host.Extensions.ServiceExtensions;
 using System.Diagnostics.CodeAnalysis;
@@ -30,7 +29,6 @@ namespace InLineBackend.Host
               {
                   cfg.RegisterServicesFromAssembly(typeof(PostNuevoJuegoCommand).Assembly); // 4-InLine-Backend.Application
                   cfg.RegisterServicesFromAssembly(typeof(PostNuevaJugadaCommand).Assembly); // 4-InLine-Backend.Application
-                  cfg.RegisterServicesFromAssembly(typeof(GetEstadoJuegoQuery).Assembly); // 4-InLine-Backend.Application
                   cfg.RegisterServicesFromAssembly(typeof(Program).Assembly); // 4-InLine-Backend.Host
               })
 

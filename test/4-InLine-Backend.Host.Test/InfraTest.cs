@@ -1,5 +1,4 @@
-﻿using Azure;
-using InLineBackend.Domain.Aggregate;
+﻿using InLineBackend.Domain.Aggregate;
 using InLineBackend.Infrastructure.Contexts;
 using InLineBackend.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
