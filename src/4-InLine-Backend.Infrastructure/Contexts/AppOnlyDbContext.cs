@@ -1,12 +1,14 @@
 ﻿using InLineBackend.Domain.Aggregate;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using System.Diagnostics.CodeAnalysis;
 
 namespace InLineBackend.Infrastructure.Contexts
 {
+    [ExcludeFromCodeCoverage]
     public class AppOnlyDbContext : DbContext
     {
-        public DbSet<Juego> Juegos { get; set; }
+        public virtual DbSet<Juego> Juegos { get; set; }
 
         public AppOnlyDbContext(DbContextOptions<AppOnlyDbContext> options)
         : base(options) { }
@@ -26,6 +28,8 @@ namespace InLineBackend.Infrastructure.Contexts
             });
         }
     }
+
+    [ExcludeFromCodeCoverage]
     public class AppOnlyDbContextFactory : IDesignTimeDbContextFactory<AppOnlyDbContext>
     {
         public AppOnlyDbContext CreateDbContext(string[] args)

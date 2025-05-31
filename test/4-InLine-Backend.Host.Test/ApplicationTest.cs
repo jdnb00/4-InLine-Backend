@@ -246,49 +246,50 @@ namespace InLineBackend.Host.Test
             //Assert
             result.Should().BeOfType<PostNuevaJugadaResultDto>();
         }
-        //[Fact]
-        //public async Task Handle_PostNuevaJugadaCommand_diagonalIzq()
-        //{
-        //    //Arrage
-        //    var commad = new PostNuevaJugadaCommand("123456", 1, 1);
-        //    var res1 = Juego.Crear(4, 4);
-        //    res1.Jugadas.Add(new Jugada()
-        //    {
-        //        IdJuego = "123456",
-        //        Jugador = 0,
-        //        Columna = 1,
-        //        Fila = 0
-        //    });
-        //    res1.Jugadas.Add(new Jugada()
-        //    {
-        //        IdJuego = "123456",
-        //        Jugador = 1,
-        //        Columna = 0,
-        //        Fila = 0
-        //    });
-        //    res1.Jugadas.Add(new Jugada()
-        //    {
-        //        IdJuego = "123456",
-        //        Jugador = 1,
-        //        Columna = 2,
-        //        Fila = 2
-        //    });
-        //    res1.Jugadas.Add(new Jugada()
-        //    {
-        //        IdJuego = "123456",
-        //        Jugador = 1,
-        //        Columna = 3,
-        //        Fila = 3
-        //    });
+
+        [Fact]
+        public async Task Handle_PostNuevaJugadaCommand_diagonalIzq()
+        {
+            //Arrage
+            var commad = new PostNuevaJugadaCommand("123456", 1, 1);
+            var res1 = Juego.Crear(4, 4);
+            res1.Jugadas.Add(new Jugada()
+            {
+                IdJuego = "123456",
+                Jugador = 0,
+                Columna = 1,
+                Fila = 0
+            });
+            res1.Jugadas.Add(new Jugada()
+            {
+                IdJuego = "123456",
+                Jugador = 1,
+                Columna = 0,
+                Fila = 0
+            });
+            res1.Jugadas.Add(new Jugada()
+            {
+                IdJuego = "123456",
+                Jugador = 1,
+                Columna = 2,
+                Fila = 2
+            });
+            res1.Jugadas.Add(new Jugada()
+            {
+                IdJuego = "123456",
+                Jugador = 1,
+                Columna = 3,
+                Fila = 3
+            });
 
 
-        //    _repo.Setup(m => m.GetEstadoJuego(It.IsAny<string>()))
-        //        .ReturnsAsync(res1);
-        //    //Act
-        //    var result = await _handlerJugada.Handle(commad, default);
-        //    //Assert
-        //    result.Should().BeOfType<PostNuevaJugadaResultDto>();
-        //}
+            _repo.Setup(m => m.GetEstadoJuego(It.IsAny<string>()))
+                .ReturnsAsync(res1);
+            //Act
+            var result = await _handlerJugada.Handle(commad, default);
+            //Assert
+            result.Should().BeOfType<PostNuevaJugadaResultDto>();
+        }
 
     }
 }
