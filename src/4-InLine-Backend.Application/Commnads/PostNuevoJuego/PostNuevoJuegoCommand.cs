@@ -2,7 +2,7 @@
 
 namespace InLineBackend.Application.Commnads.PostNuevoJuego
 {
-    public record PostNuevoJuegoCommand : IRequest<PostNuevoJuegoResultDto>
+    public class PostNuevoJuegoCommand : IRequest<PostNuevoJuegoResultDto>
     {
         public int Columna { get; }
         public int Fila { get; }

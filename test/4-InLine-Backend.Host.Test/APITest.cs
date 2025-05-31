@@ -11,12 +11,12 @@ using Xunit;
 namespace InLineBackend.Host.Test
 {
     [ExcludeFromCodeCoverage]
-    public class ControllerTest
+    public class APITest
     {
         private readonly Mock<IMediator> _mediator;
         private readonly OneController _controller;
 
-        public ControllerTest()
+        public APITest()
         {
             _mediator = new Mock<IMediator>();
             _controller = new OneController(_mediator.Object);
@@ -42,8 +42,12 @@ namespace InLineBackend.Host.Test
 
             // Act
             var result = await _controller.PostNuevoJuego(columna, fila);
+            var commadtest = new PostNuevoJuegoCommand(columna, fila);
 
             // Assert
+
+            commadtest.Columna.Should().Be(columna);
+            commadtest.Fila.Should().Be(fila);
             result.Should().BeOfType<OkObjectResult>();
         }
         [Fact]
@@ -55,10 +59,15 @@ namespace InLineBackend.Host.Test
                 .ThrowsAsync(new ArgumentException("Error al crear el juego"));
 
             //Act
-            var exception = await Xunit.Assert.ThrowsAsync<ArgumentException>(() => _controller.PostNuevoJuego(1,2));
+            var exception = await Assert.ThrowsAsync<ArgumentException>(() => _controller.PostNuevoJuego(1,2));
+
+            var exception1 =  Assert.Throws<ArgumentException>(() => new PostNuevoJuegoCommand(10, -1));
+            var exception2 =  Assert.Throws<ArgumentException>(() => new PostNuevoJuegoCommand(-1, 10));
 
             //Assert      
             Assert.IsType<ArgumentException>(exception);
+            Assert.IsType<ArgumentException>(exception1);
+            Assert.IsType<ArgumentException>(exception2);
         }
 
         [Fact]
