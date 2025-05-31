@@ -3,10 +3,11 @@ using InLineBackend.Application.Commnads.PostNuevoJuego;
 using InLineBackend.Application.Queries.GetEstadoJuego;
 using InLineBackend.Host.Extensions;
 using InLineBackend.Host.Extensions.ServiceExtensions;
-using System.Reflection;
+using System.Diagnostics.CodeAnalysis;
 
 namespace InLineBackend.Host
 {
+    [ExcludeFromCodeCoverage]
     public class Startup
     {
         private IWebHostEnvironment Environment { get; }
@@ -37,13 +38,13 @@ namespace InLineBackend.Host
             ;
             //services.AddControllers();
             //services.AddADConfigurations();
-            
+
             services.AddEndpointsApiExplorer();
-            
+
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddCorsConfig();
             services.AddSwaggerConfig();
-            
+
             //services.AddAuthenticationConfig();
             //services.AddHealthChecksConfigurations(Configuration);
 

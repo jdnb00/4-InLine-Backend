@@ -54,8 +54,8 @@ namespace InLineBackend.Domain.Aggregate
             var resultado = new List<(int, int)>();
 
             // Buscar la jugada base
-            var jugadaBase = Jugadas.FirstOrDefault(j => j.Fila == fil && j.Columna == col);
-            if (jugadaBase == null) return resultado;
+            //var jugadaBase = Jugadas.FirstOrDefault(j => j.Fila == fil && j.Columna == col);
+            //if (jugadaBase == null) return resultado;
 
             // Buscar hacia la derecha
             int c = col + 1;
