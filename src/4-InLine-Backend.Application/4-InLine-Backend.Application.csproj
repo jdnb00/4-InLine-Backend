@@ -15,4 +15,9 @@
     <ProjectReference Include="..\4-InLine-Backend.Infrastructure\4-InLine-Backend.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dto\" />
+    <Folder Include="Queries\" />
+  </ItemGroup>
+
 </Project>
